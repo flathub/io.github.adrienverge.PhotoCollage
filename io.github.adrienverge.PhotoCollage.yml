@@ -1,6 +1,6 @@
 app-id: io.github.adrienverge.PhotoCollage
 runtime: org.gnome.Platform
-runtime-version: "44"
+runtime-version: "46"
 sdk: org.gnome.Sdk
 rename-icon: photocollage
 rename-appdata-file: photocollage.appdata.xml
@@ -20,6 +20,8 @@ modules:
     build-commands:
       - pip3 install --prefix /app --no-deps .
     sources:
-      - type: git
-        url: https://github.com/adrienverge/PhotoCollage.git
-        commit: d5a6f2bc7d9d6620427edc937639f384a893202c
+      - type: archive
+        url: https://github.com/adrienverge/PhotoCollage/archive/refs/tags/v1.4.6.tar.gz
+        sha256: 4a49b97443ebe6a1823d77991d15230882cfa6c78402c923785b0838e80ba1ae
+      - type: patch
+        path: fix_appdata.patch
