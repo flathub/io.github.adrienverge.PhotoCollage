@@ -1,6 +1,6 @@
 app-id: io.github.adrienverge.PhotoCollage
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: "50"
 sdk: org.gnome.Sdk
 rename-icon: photocollage
 rename-appdata-file: photocollage.appdata.xml
@@ -14,7 +14,7 @@ finish-args:
   - --socket=wayland
 
 modules:
-  - python3-modules.json
+  - python3-modules.yaml
   - name: photocollage
     buildsystem: simple
     build-commands:
