@@ -1,6 +1,6 @@
 app-id: io.github.adrienverge.PhotoCollage
 runtime: org.gnome.Platform
-runtime-version: "50"
+runtime-version: "51"
 sdk: org.gnome.Sdk
 rename-icon: photocollage
 rename-appdata-file: photocollage.appdata.xml
@@ -14,7 +14,7 @@ finish-args:
   - --socket=wayland
 
 modules:
-  - python3-modules.yaml
+  - python3-pillow.yaml
   - name: photocollage
     buildsystem: simple
     build-commands:
@@ -27,3 +27,5 @@ modules:
           type: anitya
           project-id: 8876
           url-template: https://github.com/adrienverge/PhotoCollage/archive/refs/tags/v$version.tar.gz
+      - type: patch
+        path: fix-appdata.patch
